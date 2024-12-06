@@ -7,6 +7,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+# Advent of Code Inputs
+input.txt
+
 #mac os x
 .DS_Store
 
