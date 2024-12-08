@@ -20,9 +20,8 @@ function parseFile(filePath) {
 // Call the function and provide the file path
 const grid = parseFile("./2024/4/input.txt");
 
-for (let x = 0; x < grid[0].length; x++) {}
-
 console.log(countOccurrences(grid, "XMAS"));
+
 function countOccurrences(grid, word) {
   const rows = grid.length;
   const cols = grid[0].length;
