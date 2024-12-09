@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-console.log("Hello World!");
 const currentPoint = { X: null, Y: null };
 
 const operations = {
@@ -28,8 +27,6 @@ function parseFile(filePath) {
 }
 
 const calibrations = parseFile(path.resolve(__dirname, "input.txt"), "utf8");
-
-console.log(calibrations);
 
 const calibrationResult = calibrations.reduce((acc, curr) => {
   if (canReachSum(curr.values, curr.result)) {
