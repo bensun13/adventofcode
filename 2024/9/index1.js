@@ -1,13 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-const currentPoint = { X: null, Y: null };
-
-const operations = {
-  ADD: (a, b) => a + b,
-  MUL: (a, b) => a * b,
-};
-
 // Function to read and parse the file
 function parseFile(filePath) {
   const data = fs.readFileSync(filePath, "utf-8");
@@ -15,19 +8,9 @@ function parseFile(filePath) {
 }
 
 const layout = parseFile(path.resolve(__dirname, "input.txt"), "utf8");
-
-console.log(layout);
-
 const disk = createDiskMap(layout);
-
-console.log(disk);
-
 const defraggedDisk = rearrangeArray(disk);
-
-console.log(disk);
-
 const checkSum = calculateCheckSum(defraggedDisk);
-
 console.log(`Check Sum: ${checkSum}`);
 
 function createDiskMap(layout) {
