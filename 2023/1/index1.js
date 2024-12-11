@@ -15,6 +15,8 @@ function parseFile(filePath) {
   return map;
 }
 
+const rows = parseFile(path.resolve(__dirname, "input.txt"), "utf8");
+
 const numbersMap = {
   one: 1,
   two: 2,
@@ -26,8 +28,6 @@ const numbersMap = {
   eight: 8,
   nine: 9,
 };
-
-const rows = parseFile(path.resolve(__dirname, "input.txt"), "utf8");
 
 let result = 0;
 for (const arr of rows) {
